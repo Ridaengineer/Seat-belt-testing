@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-06-03T10:52:53.839365" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Python\Seatbelt_testing\Test\Test.robot">
+<test id="s1-t1" name="Test Seatbelt Alerts" line="14">
+<kw name="Initialize Seatbelt System" type="SETUP">
+<kw name="Fasten Seatbelt" owner="Seatbelt_methods">
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Stop Engine" owner="Seatbelt_methods">
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Person Leaves" owner="Seatbelt_methods">
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Set Vehicle Speed" owner="Seatbelt_methods">
+<arg>0</arg>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Unfasten Seatbelt" owner="Seatbelt_methods">
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Is Light Indicator Yellow" owner="Seatbelt_methods">
+<msg time="2024-06-03T10:52:53.949116" level="INFO">${light_yellow} = True</msg>
+<var>${light_yellow}</var>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Is Sound Alarm On" owner="Seatbelt_methods">
+<msg time="2024-06-03T10:52:53.949116" level="INFO">${sound_on} = False</msg>
+<var>${sound_on}</var>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-03T10:52:53.949116" level="INFO">${sound_off} = False == False</msg>
+<var>${sound_off}</var>
+<arg>${sound_on} == False</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${light_yellow}</arg>
+<arg>The warning light should be yellow when the belt is unfastened.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${sound_off}</arg>
+<arg>The audible alarm should be deactivated when the belt is unfastened.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Start Engine" owner="Seatbelt_methods">
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Person Sits" owner="Seatbelt_methods">
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Set Vehicle Speed" owner="Seatbelt_methods">
+<arg>70</arg>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Is Light Indicator Red" owner="Seatbelt_methods">
+<msg time="2024-06-03T10:52:53.949116" level="INFO">${light_red} = True</msg>
+<var>${light_red}</var>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Is Sound Alarm On" owner="Seatbelt_methods">
+<msg time="2024-06-03T10:52:53.949116" level="INFO">${sound_on} = True</msg>
+<var>${sound_on}</var>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${light_red}</arg>
+<arg>The warning light should be red when the seatbelt is not fastened, the engine is running, a person is present, and the speed is over 40 km/h.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${sound_on}</arg>
+<arg>The audible alarm must be activated when the seatbelt is not fastened, the engine is switched on, a person is present, and speed exceeds 40 km/h.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Fasten Seatbelt" owner="Seatbelt_methods">
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Is Light Indicator Green" owner="Seatbelt_methods">
+<msg time="2024-06-03T10:52:53.949116" level="INFO">${light_green} = True</msg>
+<var>${light_green}</var>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Is Sound Alarm On" owner="Seatbelt_methods">
+<msg time="2024-06-03T10:52:53.949116" level="INFO">${sound_on} = False</msg>
+<var>${sound_on}</var>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-03T10:52:53.949116" level="INFO">${sound_off} = False == False</msg>
+<var>${sound_off}</var>
+<arg>${sound_on} == False</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${light_green}</arg>
+<arg>The warning light should be green when the belt is fastened.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${sound_off}</arg>
+<arg>The audible alarm must be deactivated when the belt is fastened.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<doc>Check that light and sound alerts function correctly when the seatbelt is unfastened and fastened.</doc>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</test>
+<test id="s1-t2" name="Test Engine Off" line="41">
+<kw name="Start Engine" owner="Seatbelt_methods">
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Unfasten Seatbelt" owner="Seatbelt_methods">
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Stop Engine" owner="Seatbelt_methods">
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Is Light Indicator Yellow" owner="Seatbelt_methods">
+<msg time="2024-06-03T10:52:53.949116" level="INFO">${light_yellow} = True</msg>
+<var>${light_yellow}</var>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Is Sound Alarm On" owner="Seatbelt_methods">
+<msg time="2024-06-03T10:52:53.949116" level="INFO">${sound_on} = False</msg>
+<var>${sound_on}</var>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-03T10:52:53.949116" level="INFO">${sound_off} = False == False</msg>
+<var>${sound_off}</var>
+<arg>${sound_on} == False</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${light_yellow}</arg>
+<arg>The warning light should be yellow when the engine is off.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${sound_off}</arg>
+<arg>The audible alarm must not be activated when the engine is switched off.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<doc>Check that the audible alarm does not sound when the engine is switched off and the indicator light is yellow.</doc>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</test>
+<test id="s1-t3" name="Test Person Not Present" line="53">
+<kw name="Start Engine" owner="Seatbelt_methods">
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Unfasten Seatbelt" owner="Seatbelt_methods">
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Person Leaves" owner="Seatbelt_methods">
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Is Light Indicator Yellow" owner="Seatbelt_methods">
+<msg time="2024-06-03T10:52:53.949116" level="INFO">${light_yellow} = True</msg>
+<var>${light_yellow}</var>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Is Sound Alarm On" owner="Seatbelt_methods">
+<msg time="2024-06-03T10:52:53.949116" level="INFO">${sound_on} = False</msg>
+<var>${sound_on}</var>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-03T10:52:53.949116" level="INFO">${sound_off} = False == False</msg>
+<var>${sound_off}</var>
+<arg>${sound_on} == False</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${light_yellow}</arg>
+<arg>The warning light should be yellow when no one is in the seat.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${sound_off}</arg>
+<arg>The audible alarm must not be activated when no one is sitting on the seat.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</kw>
+<doc>Check that the audible alarm does not go off when no-one is in the seat and the indicator light is yellow.</doc>
+<status status="PASS" start="2024-06-03T10:52:53.949116" elapsed="0.000000"/>
+</test>
+<test id="s1-t4" name="Test Speed Less Than 40" line="65">
+<kw name="Start Engine" owner="Seatbelt_methods">
+<status status="PASS" start="2024-06-03T10:52:53.964674" elapsed="0.000000"/>
+</kw>
+<kw name="Person Sits" owner="Seatbelt_methods">
+<status status="PASS" start="2024-06-03T10:52:53.964674" elapsed="0.000000"/>
+</kw>
+<kw name="Unfasten Seatbelt" owner="Seatbelt_methods">
+<status status="PASS" start="2024-06-03T10:52:53.964674" elapsed="0.000000"/>
+</kw>
+<kw name="Set Vehicle Speed" owner="Seatbelt_methods">
+<arg>20</arg>
+<status status="PASS" start="2024-06-03T10:52:53.964674" elapsed="0.000000"/>
+</kw>
+<kw name="Is Light Indicator Yellow" owner="Seatbelt_methods">
+<msg time="2024-06-03T10:52:53.964674" level="INFO">${light_yellow} = True</msg>
+<var>${light_yellow}</var>
+<status status="PASS" start="2024-06-03T10:52:53.964674" elapsed="0.000000"/>
+</kw>
+<kw name="Is Sound Alarm On" owner="Seatbelt_methods">
+<msg time="2024-06-03T10:52:53.964674" level="INFO">${sound_on} = False</msg>
+<var>${sound_on}</var>
+<status status="PASS" start="2024-06-03T10:52:53.964674" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-03T10:52:53.964674" level="INFO">${sound_off} = False == False</msg>
+<var>${sound_off}</var>
+<arg>${sound_on} == False</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-03T10:52:53.964674" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${light_yellow}</arg>
+<arg>The warning light should be yellow when speed is below 40 km/h.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-06-03T10:52:53.964674" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${sound_off}</arg>
+<arg>The audible alarm should not be activated at speeds below 40 km/h.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-06-03T10:52:53.967680" elapsed="0.000000"/>
+</kw>
+<doc>Check that the audible alarm does not sound when vehicle speed is below 40 km/h and the indicator light is yellow.</doc>
+<status status="PASS" start="2024-06-03T10:52:53.964674" elapsed="0.003006"/>
+</test>
+<test id="s1-t5" name="Test All Conditions Met" line="78">
+<kw name="Start Engine" owner="Seatbelt_methods">
+<status status="PASS" start="2024-06-03T10:52:53.967680" elapsed="0.000000"/>
+</kw>
+<kw name="Person Sits" owner="Seatbelt_methods">
+<status status="PASS" start="2024-06-03T10:52:53.967680" elapsed="0.000000"/>
+</kw>
+<kw name="Unfasten Seatbelt" owner="Seatbelt_methods">
+<status status="PASS" start="2024-06-03T10:52:53.967680" elapsed="0.000000"/>
+</kw>
+<kw name="Set Vehicle Speed" owner="Seatbelt_methods">
+<arg>65</arg>
+<status status="PASS" start="2024-06-03T10:52:53.967680" elapsed="0.000000"/>
+</kw>
+<kw name="Is Light Indicator Red" owner="Seatbelt_methods">
+<msg time="2024-06-03T10:52:53.967680" level="INFO">${light_red} = True</msg>
+<var>${light_red}</var>
+<status status="PASS" start="2024-06-03T10:52:53.967680" elapsed="0.000000"/>
+</kw>
+<kw name="Is Sound Alarm On" owner="Seatbelt_methods">
+<msg time="2024-06-03T10:52:53.967680" level="INFO">${sound_on} = True</msg>
+<var>${sound_on}</var>
+<status status="PASS" start="2024-06-03T10:52:53.967680" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${light_red}</arg>
+<arg>The warning light should be red when all conditions are met.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-06-03T10:52:53.967680" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${sound_on}</arg>
+<arg>The audible alarm must be activated when all conditions are met.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2024-06-03T10:52:53.967680" elapsed="0.000000"/>
+</kw>
+<doc>Check that the audible alarm sounds when the seatbelt is not fastened, the engine is running, a person is present and the speed is greater than or equal to 40 km/h.</doc>
+<status status="PASS" start="2024-06-03T10:52:53.967680" elapsed="0.000000"/>
+</test>
+<status status="PASS" start="2024-06-03T10:52:53.839365" elapsed="0.128315"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
